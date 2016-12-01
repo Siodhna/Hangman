@@ -2,26 +2,11 @@ import pygame
 
 pygame.init()
 
+win_width = 1200
+win_height = 600
+
 Screen = pygame.display.set_mode((win_width, win_height))  # teeb akna
 pygame.display.set_caption("Hangman")  # aknale pealkiri
-
-
-
-gameExit = False
-
-while not gameExit:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            gameExit = True
-        if event.type == pygame.MOUSEBUTTONUP:
-
-            pass
-
-
-    pygame.display.update()
-
-    pygame.quit()
-    quit()
 
 # Fonts
 def text_objects(text, color, size):
@@ -49,7 +34,6 @@ def message_to_screen(msg, color, y_displace=0, size="small", background=white, 
         pygame.draw.rect(Screen, white, ((display_width / 2 - textrectangle.width / 2 + x_displace),
                                          (display_height / 2 - textrectangle.height / 2 + y_displace), textrectangle.width, textrectangle.height))
     Screen.blit(textsurface, textrectangle)
-
 
 # Button info
 class Button():
@@ -91,3 +75,19 @@ def collision(box_x, box_y, box_w, box_h, point_x, point_y):
         return False
     else:
         return True
+
+gameExit = False
+
+while not gameExit:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            gameExit = True
+        if event.type == pygame.MOUSEBUTTONUP:
+
+            pass
+
+
+    pygame.display.update()
+
+    pygame.quit()
+    quit()
