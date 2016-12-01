@@ -2,9 +2,13 @@ import pygame
 
 pygame.init()
 
+win_width = 1200
+win_height = 600
+
 Screen = pygame.display.set_mode((win_width, win_height))  # teeb akna
 pygame.display.set_caption("Hangman")  # aknale pealkiri
 
+<<<<<<< HEAD
 
 gameExit = False
 
@@ -22,6 +26,8 @@ while not gameExit:
     pygame.quit()
     quit()
 
+=======
+>>>>>>> origin/master
 # Fonts
 def text_objects(text, color, size):
     if size == "small":
@@ -48,7 +54,6 @@ def message_to_screen(msg, color, y_displace=0, size="small", background=white, 
         pygame.draw.rect(Screen, white, ((display_width / 2 - textrectangle.width / 2 + x_displace),
                                          (display_height / 2 - textrectangle.height / 2 + y_displace), textrectangle.width, textrectangle.height))
     Screen.blit(textsurface, textrectangle)
-
 
 # Button info
 class Button():
@@ -99,10 +104,17 @@ while not gameExit:
             gameExit = True
         if event.type == pygame.MOUSEBUTTONUP:
 
+<<<<<<< HEAD
+=======
+            pass
+>>>>>>> origin/master
 
 
     pygame.display.update()
 
     pygame.quit()
     quit()
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
