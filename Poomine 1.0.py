@@ -1,1 +1,3 @@
-# here be game
+import pygame
+
+
