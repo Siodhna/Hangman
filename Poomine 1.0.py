@@ -15,6 +15,7 @@ while not gameExit:
             gameExit = True
         if event.type == pygame.MOUSEBUTTONUP:
 
+            pass
 
 
     pygame.display.update()
